@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechJobs ECE - Find Your Perfect IT Job</title>
+    <meta
+      name="description"
+      content="Specialized job portal for ECE students transitioning to IT careers"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Logo -->
+          <div class="logo">
+            <div class="logo-icon">
+              <span>TJ</span>
+            </div>
+            <span class="logo-text">TechJobs ECE</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <a href="#jobs" class="nav-link">Jobs</a>
+            <a href="#companies" class="nav-link">Companies</a>
+            <a href="#resources" class="nav-link">Resources</a>
+            <a href="#about" class="nav-link">About</a>
+          </nav>
+
+          <!-- Desktop Auth Buttons -->
+          <div class="auth-buttons">
+            <button class="btn btn-ghost">Login</button>
+            <button class="btn btn-primary">Sign Up</button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <nav class="mobile-nav">
+            <a href="#jobs" class="nav-link">Jobs</a>
+            <a href="#companies" class="nav-link">Companies</a>
+            <a href="#resources" class="nav-link">Resources</a>
+            <a href="#about" class="nav-link">About</a>
+            <div class="mobile-auth">
+              <button class="btn btn-ghost">Login</button>
+              <button class="btn btn-primary">Sign Up</button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Find Your Perfect IT Job</h1>
+          <p class="hero-subtitle">
+            Specialized job portal for ECE students transitioning to IT careers.
+            Discover opportunities that value your engineering background.
+          </p>
+
+          <!-- Search Form -->
+          <div class="search-form">
+            <div class="search-inputs">
+              <div class="input-group">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  placeholder="Job title, keywords, or company"
+                  id="jobSearch"
+                />
+              </div>
+              <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <input
+                  type="text"
+                  placeholder="City, state, or remote"
+                  id="locationSearch"
+                />
+              </div>
+              <button class="btn btn-primary btn-large" id="searchBtn">
+                Search Jobs
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Searches -->
+    <section class="popular-searches">
+      <div class="container">
+        <div class="popular-content">
+          <span class="popular-label">Popular searches:</span>
+          <div class="popular-tags">
+            <button class="tag-btn">Frontend Developer</button>
+            <button class="tag-btn">Software Trainee</button>
+            <button class="tag-btn">Data Analyst</button>
+            <button class="tag-btn">DevOps Engineer</button>
+            <button class="tag-btn">Backend Developer</button>
+            <button class="tag-btn">Full Stack Developer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section class="job-listings" id="jobs">
+      <div class="container">
+        <div class="listings-wrapper">
+          <!-- Filters Sidebar -->
+          <aside class="filters-sidebar">
+            <div class="filters-card">
+              <div class="filters-header">
+                <h3>Filters</h3>
+                <button class="clear-filters">Clear All</button>
+              </div>
+              <div class="filters-content">
+                <!-- Location Filter -->
+                <div class="filter-group">
+                  <h4>Location</h4>
+                  <input
+                    type="text"
+                    placeholder="Enter city"
+                    class="filter-input"
+                  />
+                </div>
+
+                <!-- Experience Level Filter -->
+                <div class="filter-group">
+                  <h4>Experience Level</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="fresher" />
+                      <span class="checkmark"></span>
+                      Fresher (0 years)
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="0-1" />
+                      <span class="checkmark"></span>
+                      0-1 years
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="1-2" />
+                      <span class="checkmark"></span>
+                      1-2 years
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="2-3" />
+                      <span class="checkmark"></span>
+                      2-3 years
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Job Type Filter -->
+                <div class="filter-group">
+                  <h4>Job Type</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="full-time" />
+                      <span class="checkmark"></span>
+                      Full-time
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="part-time" />
+                      <span class="checkmark"></span>
+                      Part-time
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="internship" />
+                      <span class="checkmark"></span>
+                      Internship
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="contract" />
+                      <span class="checkmark"></span>
+                      Contract
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="remote" />
+                      <span class="checkmark"></span>
+                      Remote
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Salary Range -->
+                <div class="filter-group">
+                  <h4>Salary Range (LPA)</h4>
+                  <input
+                    type="number"
+                    placeholder="Min salary"
+                    class="filter-input"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Max salary"
+                    class="filter-input"
+                  />
+                </div>
+
+                <!-- ECE Specific -->
+                <div class="filter-group">
+                  <h4>ECE Specific</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="ece-relevant" />
+                      <span class="checkmark"></span>
+                      ECE Background Preferred
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" value="training-provided" />
+                      <span class="checkmark"></span>
+                      Training Provided
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Job Listings -->
+          <main class="jobs-main">
+            <div class="jobs-header">
+              <h2 class="jobs-title">4 Jobs Found</h2>
+              <p class="jobs-subtitle">
+                Showing jobs relevant for ECE students
+              </p>
+            </div>
+
+            <div class="jobs-list" id="jobsList">
+              <!-- Job cards will be populated by JavaScript -->
+            </div>
+
+            <div class="load-more">
+              <button class="btn btn-outline btn-large">Load More Jobs</button>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <span>TJ</span>
+              </div>
+              <span class="logo-text">TechJobs ECE</span>
+            </div>
+            <p class="footer-description">
+              Connecting ECE students with amazing tech career opportunities.
+            </p>
+          </div>
+
+          <!-- For Job Seekers -->
+          <div class="footer-section">
+            <h3>For Job Seekers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Browse Jobs</a></li>
+              <li><a href="#">Career Resources</a></li>
+              <li><a href="#">Resume Builder</a></li>
+              <li><a href="#">Interview Prep</a></li>
+            </ul>
+          </div>
+
+          <!-- For Employers -->
+          <div class="footer-section">
+            <h3>For Employers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Post a Job</a></li>
+              <li><a href="#">Browse Candidates</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Contact Sales</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 TechJobs ECE. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
